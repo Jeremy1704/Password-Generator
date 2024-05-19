@@ -1,0 +1,401 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: 25px;
+    background-image: radial-gradient( #000000, #160025);
+
+    font-family: Courier;
+    font-style: normal;
+    font-weight: bolder;
+
+
+}
+
+.container {
+    width: 280px;
+    height: 170px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.container1 {
+    width: 240px;
+    height: 240px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    appearance: none;
+    background-color: transparent;
+    border: 0.125em solid #1A1A1A;
+    border-radius: 0.9375em;
+    box-sizing: border-box;
+    color: #3B3B3B;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    min-height: 3.75em;
+    min-width: 0;
+    outline: none;
+    padding: 1em 4.5em;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    will-change: transform;
+}
+
+    button:disabled {
+        pointer-events: none;
+    }
+
+    button:hover {
+        color: #fff;
+        background-color: #1A1A1A;
+        box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+        transform: translateY(-2px);
+    }
+
+    button:active {
+        box-shadow: none;
+        transform: translateY(0);
+    }
+
+
+.dreptunghi2 {
+    width: 100%;
+    height: 40%;
+    background-color: #707070;
+    box-sizing: border-box;
+    border-radius: 25px;
+}
+
+.dreptunghi {
+    width: 100%;
+    height: 160%;
+    background-color: #707070;
+    box-sizing: border-box;
+    border-radius: 25px;
+}
+
+.q {
+    text-align: center;
+    color: #a5a5a5;
+    font-family: Courier;
+    font-style: normal;
+    font-weight: bold;
+}
+
+
+
+
+
+/*primul checkmark*/
+.o1 {
+    padding-right: 10px;
+    padding-top: 20px;
+    padding-left: 6px;
+    text-align: left;
+    color: #030303;
+    font-family: Courier;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.checkbox-container {
+    display: inline-block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    user-select: none;
+}
+
+.custom-checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+    .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+        left: 9px;
+        top: 5px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        transform: rotate(45deg);
+    }
+
+.custom-checkbox:checked ~ .checkmark {
+    background-color: #2196F3;
+    box-shadow: 0 3px 7px rgba(33, 150, 243, 0.3);
+}
+
+    .custom-checkbox:checked ~ .checkmark:after {
+        display: block;
+    }
+
+@keyframes checkAnim {
+    0% {
+        height: 0;
+    }
+
+    100% {
+        height: 10px;
+    }
+}
+
+.custom-checkbox:checked ~ .checkmark:after {
+    animation: checkAnim 0.2s forwards;
+}
+
+
+
+
+
+/*al doilea cheackmark*/
+.o2 {
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-left: 6px;
+    text-align: left;
+    color: #030303;
+    font-family: Courier;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.container {
+    position: relative;
+    padding-left: 30px;
+    padding-right: 10px;
+}
+
+    .container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+
+.checkmark {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 15px;
+    width: 15px;
+    background-color: #eee;
+    border-radius: 5px;
+}
+
+.container:hover .checkmark {
+    background-color: #eee;
+}
+
+.container input:checked ~ .checkmark {
+    background-color: #030303;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.container .checkmark:after {
+    left: 4px;
+    top: 1px;
+    width: 4px;
+    height: 7px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+
+
+
+
+/*al treilea checkmark*/
+.o3 {
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-left: 6px;
+    text-align: left;
+    color: #030303;
+    font-family: Courier;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.container {
+    position: relative;
+    padding-left: 30px;
+    padding-right: 10px;
+}
+
+    .container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+
+.checkmark {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 15px;
+    width: 15px;
+    background-color: #eee;
+    border-radius: 5px;
+}
+
+.container:hover .checkmark {
+    background-color: #eee;
+}
+
+.container input:checked ~ .checkmark {
+    background-color: #030303;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.container .checkmark:after {
+    left: 4px;
+    top: 1px;
+    width: 4px;
+    height: 7px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+
+
+
+
+/*al patrulea checkmark*/
+.o4 {
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-left: 6px;
+    text-align: left;
+    color: #030303;
+    font-family: Courier;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.container {
+    position: relative;
+    padding-left: 30px;
+    padding-right: 10px;
+}
+
+    .container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+
+.checkmark {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 15px;
+    width: 15px;
+    background-color: #eee;
+    border-radius: 5px;
+}
+
+.container:hover .checkmark {
+    background-color: #eee;
+}
+
+.container input:checked ~ .checkmark {
+    background-color: #030303;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.container .checkmark:after {
+    left: 4px;
+    top: 1px;
+    width: 4px;
+    height: 7px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.pass {
+    padding-right: 135px;
+    padding-top: 15px;
+    text-align: center;
+    color: #d1d1d1;
+    font-family: Courier;
+    font-style: normal;
+    font-weight: bold;
+}

@@ -1,0 +1,70 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site cu Dreptunghi Central</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="container" , style="padding-top: 10px;">
+
+        <h3 class="q">password generator</h3>
+        <div class="dreptunghi2" , style="text-align: center;">
+
+            <div style="padding:20px">
+                
+                @if(ViewBag.Message !=null)
+                {
+                    <div>@ViewBag.Message</div>
+                }
+
+            </div>
+           
+        </div>
+        <div class="dreptunghi" , style="text-align: center;">
+            <div>
+                <h2>   </h2>
+            </div>
+            @using (Html.BeginForm())
+            {
+                <div class="o1">
+                    <label class="container">
+                        <input type="checkbox" id="checkbox" name="checkbox" value="true">
+                        <span class="checkmark"></span>
+                    </label>Doar litere mari <br />
+                </div>
+                <div class="o2">
+                    <label class="container">
+                        <input type="checkbox" id="checkbox2" name="checkbox2" value="true">
+                        <span class="checkmark"></span>
+                    </label>Doar litere mici <br />
+                </div>
+                <div class="o3">
+                    <label class="container">
+                        <input type="checkbox" id="checkbox3" name="checkbox3" value="true">
+                        <span class="checkmark"></span>
+                    </label>Doar simboluri <br />
+                </div>
+                <div class="o4">
+                    <label class="container">
+                        <input type="checkbox" id="checkbox4" name="checkbox4" value="true">
+                        <span class="checkmark"></span>
+                    </label>Doar cifre <br />
+                </div>
+                <h1>   </h1>
+                <div class="container1">
+                    <button>Generate</button>
+                </div>
+            }
+        </div>
+
+
+    </div>
+</body>
+</html>
